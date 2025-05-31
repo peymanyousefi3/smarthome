@@ -1,6 +1,6 @@
 <span id="title">
 
-# Competition Organizer Template
+Smart Home
 
 </span>
 
@@ -32,6 +32,7 @@ Write here a short description of your competition.
 
 <span id="information">
 
+Smart Home
 - Difficulty: Middle School, High School, Bachelor, Master or PhD
 - Robot: robot name
 - Language: programming language of the controller template
