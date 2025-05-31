@@ -1,0 +1,332 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "../protos/Surface.proto"
+EXTERNPROTO "../protos/TexturedBackground.proto"
+EXTERNPROTO "../protos/TexturedBackgroundLight.proto"
+IMPORTABLE EXTERNPROTO "../protos/U14.proto"
+IMPORTABLE EXTERNPROTO "../protos/U19.proto"
+IMPORTABLE EXTERNPROTO "../protos/PaintedPlane.proto"
+EXTERNPROTO "../protos/ActualWall.proto"
+EXTERNPROTO "../protos/SmartHomeInfo.proto"
+EXTERNPROTO "../protos/Fridge.proto"
+EXTERNPROTO "../protos/WashingMachine.proto"
+EXTERNPROTO "../protos/Sofa.proto"
+EXTERNPROTO "../protos/Bed.proto"
+EXTERNPROTO "../protos/Television.proto"
+EXTERNPROTO "../protos/Radiator.proto"
+EXTERNPROTO "../protos/BunchOfSunFlowers.proto"
+EXTERNPROTO "../protos/Oven.proto"
+EXTERNPROTO "../protos/Toilet.proto"
+EXTERNPROTO "../protos/Bathtube.proto"
+EXTERNPROTO "../protos/BathroomSink.proto"
+
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.7071058944004134 -0.7071075303095639 -0.00044122975946080274 3.1424756918898864
+  position 0.08499409337181162 8.234551329037195 0.06706112130892322
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+DirectionalLight {
+  direction -0.5 -1 -0.5
+}
+DEF GROUND Surface {
+  size 2.56 2.56
+  box_size 5 5 0.01
+  textureUrl [
+    "/Users/arshiasadeghi/Desktop/Robotics/Fira2025/R1/game/protos/textures/modified_paint_texture2.png"
+  ]
+  rotation 1 0 0 -1.5707903061004251
+}
+DEF Walls Group {
+  children [
+    ActualWall {
+      translation 0.290004 0.12 0.29
+      rotation 0 1 0 1.5708
+      name "ActualWall(3)"
+      size 0.03 0.25 1
+    }
+    ActualWall {
+      translation -0.27 0.125 0.725
+      rotation 0 1 0 -1.5707953071795862
+      name "Wall 4(3)"
+      size 0.03 0.25 1.01
+    }
+    ActualWall {
+      translation -0.285 0.125 0.855
+      rotation 0 1 0 3.14159
+      name "Wall 4(2)"
+      size 0.03 0.25 0.45
+    }
+    ActualWall {
+      translation -0.27 0.125 -0.39
+      rotation 0 1 0 -1.5707953071795862
+      size 0.03 0.25 1
+    }
+    ActualWall {
+      translation 0.3 0.125 0.28
+      name "ActualWall(1)"
+      size 0.03 0.24 0.55
+    }
+    ActualWall {
+      translation -0.285098 0.125 -0.79877
+      name "ActualWall(2)"
+      size 0.03 0.25 0.7
+    }
+    DEF Main_Walls Group {
+      children [
+        ActualWall {
+          translation -1.28356 0.125 -1.28712
+          name "Wall 1"
+          size 0.03 0.25 2.56
+        }
+        ActualWall {
+          translation 1.28 0.125 -1.28
+          name "Wall 2"
+          size 0.03 0.25 2.56
+        }
+        ActualWall {
+          translation 1.295 0.125 -1.28
+          rotation 0 1 0 -1.5707953071795862
+          name "Wall 3"
+          size 0.03 0.25 2.59
+        }
+        ActualWall {
+          translation 1.295 0.125 1.28
+          rotation 0 1 0 -1.5707953071795862
+          name "Wall 4"
+          size 0.03 0.25 2.59
+        }
+      ]
+    }
+  ]
+}
+DEF Info SmartHomeInfo {
+  charging_points_count 0
+  charging_points [
+    0.8 0.8
+    -0.8 -0.9
+  ]
+  relocation_points_count 3
+  relocation_points [
+    0 1
+    0 0
+    0 -1
+    0.6 -1
+  ]
+  start_point 0 0.00439432 0
+  rooms_count 5
+  room1 [
+    -1.27 1.27
+    -1.27 0.73
+    -0.28 0.73
+    -0.28 1.27
+  ]
+  room2 [
+    -1.27 0.73
+    -1.27 -0.39
+    -0.28 -0.39
+    -0.28 0.73
+  ]
+  room3 [
+    -1.27 -0.39
+    -1.27 -1.27
+    -0.28 -1.27
+    -0.28 -0.39
+  ]
+  room4_count 6
+  room4 [
+    -0.28 1.27
+    -0.28 -1.27
+    1.27 -1.27
+    1.27 0.29
+    0.3 0.29
+    0.3 1.27
+    0 0
+    0 0
+    0 0
+    0 0
+  ]
+  room5 [
+    0.3 1.27
+    0.3 0.29
+    1.27 0.29
+    1.27 1.27
+  ]
+}
+DEF MAINSUPERVISOR Robot {
+  children [
+    Receiver {
+      channel 1
+    }
+    Emitter {
+      channel 1
+    }
+  ]
+  controller "FiraSmartHomeSupervisor"
+  customData "480"
+  supervisor TRUE
+  window "SmarthomeWindow"
+}
+DEF Furnitures Group {
+  children [
+    BathroomSink {
+      translation -0.82 0.1 0.74
+      rotation 0.577349935856137 0.577349935856137 0.5773509358560258 -2.094395307179586
+    }
+    BathroomSink {
+      translation 0.31 0.1 0.760001
+      rotation -1 -2.39745e-09 -6.97981e-07 1.5708
+      name "sink(1)"
+    }
+    Bathtube {
+      translation -1.21 -1.17261e-06 1.15
+      rotation 1 0 0 -1.5707953071795862
+    }
+    Toilet {
+      translation -0.36 -6.00099e-07 0.78
+      rotation 5.1456184076937684e-08 0.7071067811865466 0.7071067811865466 3.14159
+    }
+    Oven {
+      hidden position_0_0 2.7462576542156306e-12
+      hidden translation_1 0.24999999975008325 0 0.1900049991668263
+      translation 1.23 2.93319e-06 0.399999
+      rotation -1.8421994299301907e-06 0.7071067811853476 0.7071067811853476 3.14159
+    }
+    Oven {
+      hidden position_0_0 3.235559300752016e-12
+      hidden translation_1 0.24999999974999998 0 0.19000500000012524
+      translation 1.23 2.6796e-06 0.339999
+      rotation -1.933939401540862e-06 0.7071067811852252 0.7071067811852252 3.14159
+      name "oven(1)"
+    }
+    Oven {
+      hidden position_0_0 2.7308070082031045e-12
+      hidden translation_1 0.25 0 0.18999999941674814
+      translation 1.23 2.02024e-06 0.46
+      rotation -1.8388094309774008e-06 0.7071057811849545 0.7071077811843355 3.14159
+      name "oven(2)"
+    }
+    BunchOfSunFlowers {
+      translation -1.24 1.26441e-06 -1.24
+      rotation 1 0 0 -1.5707953071795862
+    }
+    BunchOfSunFlowers {
+      translation -1.15 1.26441e-06 -1.24
+      rotation 1 0 0 -1.5707953071795862
+      name "bunch of sunflowers(1)"
+    }
+    BunchOfSunFlowers {
+      translation -0.72 -1.26441e-06 1.24
+      rotation 1 0 0 -1.5707953071795862
+      name "bunch of sunflowers(3)"
+    }
+    BunchOfSunFlowers {
+      translation 0.67 -2.54902e-07 0.25
+      rotation 1 0 0 -1.5707953071795862
+      name "bunch of sunflowers(6)"
+    }
+    BunchOfSunFlowers {
+      translation 0.77 -2.54902e-07 0.25
+      rotation 1 0 0 -1.5707953071795862
+      name "bunch of sunflowers(7)"
+    }
+    BunchOfSunFlowers {
+      translation 0.88 -2.54902e-07 0.25
+      rotation 1 0 0 -1.5707953071795862
+      name "bunch of sunflowers(8)"
+    }
+    BunchOfSunFlowers {
+      translation -0.9 -1.26441e-06 1.24
+      rotation 1 0 0 -1.5707953071795862
+      name "bunch of sunflowers(4)"
+    }
+    BunchOfSunFlowers {
+      translation -0.81 -1.26441e-06 1.24
+      rotation 1 0 0 -1.5707953071795862
+      name "bunch of sunflowers(5)"
+    }
+    ActualWall {
+      translation 1.28 0.125 -1.28
+      name "Wall 2(2)"
+      size 0.03 0.25 2.56
+    }
+    ActualWall {
+      translation 1.28 0.125 -1.28
+      name "Wall 2(1)"
+      size 0.03 0.25 2.56
+    }
+    BunchOfSunFlowers {
+      translation -1.24 1.17261e-06 -1.15
+      rotation 1 0 0 -1.5707953071795862
+      name "bunch of sunflowers(2)"
+    }
+    Radiator {
+      translation 0.65 0.0500001 1.26
+      rotation 0.577349935856137 0.5773509358560258 0.577349935856137 -2.094395307179586
+    }
+    Radiator {
+      translation 0.74 0.0500001 1.26
+      rotation 0.577349935856137 0.5773509358560258 0.577349935856137 -2.094395307179586
+      name "radiator(1)"
+    }
+    Television {
+      translation -0.78 0.14 -1.26
+      rotation 0.577349935856137 0.577349935856137 0.5773509358560258 -2.094395307179586
+    }
+    Television {
+      translation -1.27 0.14 0.16
+      rotation 1 0 0 -1.5707953071795862
+      name "television(2)"
+    }
+    Television {
+      translation -0.27 0.14 -0.45
+      rotation 1 1.19872e-08 1.88117e-06 -1.5707953071795862
+      name "television(1)"
+    }
+    Bed {
+      translation -0.43 2.18304e-07 0.590001
+      rotation 6.005052387953513e-07 0.7071062811860445 0.7071072811864422 3.14159
+    }
+    Bed {
+      translation -0.57 5.58231e-06 -0.53
+      rotation -0.5773496025232256 0.5773506025225371 0.5773506025225371 2.09439
+      name "bed(2)"
+    }
+    Bed {
+      translation -1.00512 6.96022e-06 -0.535118
+      rotation 0.5773502691890485 -0.5773512691895147 -0.5773492691885823 -2.094395307179586
+      name "bed(3)"
+    }
+    Bed {
+      translation -0.43 9.81526e-07 -0.24
+      rotation 6.072872414922622e-07 0.7071062811860415 0.7071072811864392 3.14159
+      name "bed(1)"
+    }
+    Sofa {
+      translation 0.87608 -1.39212e-06 -0.42
+      rotation 1.2196604850063285e-06 0.7071062811856459 0.7071072811860436 3.14159
+    }
+    Sofa {
+      translation 0.496718 4.49248e-06 -0.862572
+      rotation -0.5773499358526729 -0.5773479358528951 -0.5773529358523396 2.09439
+      name "sofa(3)"
+    }
+    WashingMachine {
+      translation 1.21 0.0899999 1.21
+      rotation -7.513717674880404e-08 0.7071057811861479 0.707107781185529 3.14159
+    }
+    Fridge {
+      hidden position_0_0 0.00012925078662938
+      hidden position_0_1 0.00012922222737192876
+      hidden rotation_1 0 0 -1 0.0005256375685553665
+      hidden rotation_2 0 0 -1 0.0008575604692547951
+      translation 0.36 8.40394e-07 0.34
+      rotation 0.5773502691890485 0.5773492691885823 0.5773512691895147 -2.094395307179586
+    }
+  ]
+}
