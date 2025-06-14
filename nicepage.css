@@ -46118,9 +46118,14 @@ a.u-link.u-text-hover-color-var:hover {
   margin: -92px 0 60px auto;
 }
 
+.u-header .u-hamburger-link-1 {
+  font-size: 1.5rem;
+  padding: 4px 0;
+}
+
 .u-header .u-nav-1 {
+  font-weight: 500;
   font-size: 1rem;
-  letter-spacing: normal;
 }
 
 .u-header .u-nav-2 {
@@ -46133,25 +46138,136 @@ a.u-link.u-text-hover-color-var:hover {
 }
 @media (max-width: 991px) {
   .u-header .u-group-elements-1 {
-    width: 720px;
+    width: 620px;
+  }
+
+  .u-header .u-image-2 {
+    margin-top: -102px;
+    margin-left: 99px;
+  }
+
+  .u-header .u-image-3 {
+    width: 132px;
+    margin-top: -102px;
+    margin-right: 92px;
+  }
+
+  .u-header .u-image-4 {
+    width: 183px;
+    height: 85px;
+    margin-top: -98px;
+    margin-left: 200px;
+  }
+
+  .u-header .u-image-5 {
+    margin-top: -88px;
   }
 
   .u-header .u-menu-1 {
-    margin-top: 20px;
+    width: auto;
+    margin-top: -72px;
   }
 }
 @media (max-width: 767px) {
+  .u-header .u-sheet-1 {
+    min-height: 150px;
+  }
+
   .u-header .u-group-elements-1 {
-    width: 540px;
+    width: 481px;
+    margin-top: 19px;
+  }
+
+  .u-header .u-image-1 {
+    width: 85px;
+    height: 85px;
+    margin-top: 6px;
+  }
+
+  .u-header .u-image-2 {
+    width: 70px;
+    height: 60px;
+    margin-top: -65px;
+    margin-left: 76px;
+  }
+
+  .u-header .u-image-3 {
+    margin-top: -86px;
+    margin-right: auto;
+    margin-left: 281px;
+  }
+
+  .u-header .u-image-4 {
+    width: 129px;
+    height: 60px;
+    margin-top: -86px;
+    margin-left: 141px;
+  }
+
+  .u-header .u-image-5 {
+    width: 60px;
+    height: 60px;
+    margin-top: -60px;
+  }
+
+  .u-header .u-menu-1 {
+    margin-top: -72px;
+    margin-bottom: 59px;
+  }
+
+  .u-header .u-hamburger-link-1 {
+    font-size: calc(1em + 8px);
   }
 }
 @media (max-width: 575px) {
   .u-header .u-sheet-1 {
-    min-height: 620px;
+    min-height: 71px;
   }
 
   .u-header .u-group-elements-1 {
-    width: 340px;
+    width: 292px;
+    min-height: 50px;
+    margin-top: 11px;
+  }
+
+  .u-header .u-image-1 {
+    width: 50px;
+    height: 50px;
+    margin-top: 0;
+  }
+
+  .u-header .u-image-2 {
+    width: 40px;
+    height: 40px;
+    margin-top: -44px;
+    margin-left: 45px;
+  }
+
+  .u-header .u-image-3 {
+    width: 79px;
+    height: 42px;
+    margin-top: -37px;
+    margin-left: 164px;
+  }
+
+  .u-header .u-image-4 {
+    width: 73px;
+    height: 30px;
+    margin-top: -37px;
+    margin-left: 85px;
+  }
+
+  .u-header .u-image-5 {
+    width: 39px;
+    height: 39px;
+    margin-top: -33px;
+    margin-right: auto;
+    margin-left: 253px;
+  }
+
+  .u-header .u-menu-1 {
+    margin-top: -41px;
+    margin-bottom: 20px;
   }
 }
  .u-footer {

@@ -115,6 +115,10 @@
 }
 
 @media (max-width: 991px) {
+   .u-section-1 {
+    min-height: 630px;
+  }
+
   .u-section-1 .u-image-1 {
     width: 276px;
   }
@@ -635,19 +639,14 @@
   font-size: 0.875rem;
   letter-spacing: 1px;
   font-weight: 700;
-  margin: 31px auto 27px 384px;
+  margin: 30px auto;
   padding: 23px 128px 23px 127px;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 575px) {
   .u-section-4 .u-btn-1 {
-    margin-left: 184px;
-  }
-}
-
-@media (max-width: 991px) {
-  .u-section-4 .u-btn-1 {
-    margin-left: 0;
+    margin-left: -26px;
+    margin-right: -26px;
   }
 } .u-section-5 {
   background-position: 50% 50%, 50% 50%;
